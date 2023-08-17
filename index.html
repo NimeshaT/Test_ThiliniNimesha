@@ -18,6 +18,9 @@
 
     <!-- Custom CSS File -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- lang js File -->
+    <script src="lang.js"></script>
    
 </head>
 
@@ -29,17 +32,26 @@
 
     <nav class="navbar navbar-light bg-white justify-content-end">
             <!-- Dropdown -->
-            <div class="btn-group">
+            <!-- <div class="btn-group">
                 <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
                     English
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">English</a>
-                    <a class="dropdown-item" href="#">French</a>
-                    <a class="dropdown-item" href="#">German</a>
-                    <a class="dropdown-item" href="#">Italian</a>
+                    <a class="dropdown-item" href="index.html" onclick="changeLang('eng')">English</a>
+                    <a class="dropdown-item" href="index.html" onclick="changeLang('fr')">French</a>
+                    <a class="dropdown-item" href="index.html">German</a>
+                    <a class="dropdown-item" href="index.html">Italian</a>
                 </div>
-            </div>
+            </div> -->
+            <form action="index.html" method="post">
+                <select name="languages" id="lang">
+                  <option value="eng" href="index.html" onclick="changeLang('eng')">English</option>
+                  <option value="fr" href="index.html" onclick="changeLang('fr')">French</option>
+                  <option value="German" href="index.html">German</option>
+                  <option value="Italian" href="index.html">Italian</option>
+                </select>
+                <input type="submit" value="Submit">
+          </form>
     </nav>
 
     <nav class="navbar navbar-expand-sm bg-secondary">
@@ -74,7 +86,7 @@
     <div class="container text-center pt-5 pb-5">
         <h2 class="head">OUR TEAMS ARE HERE</h2>
         <hr />
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+        <p id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit

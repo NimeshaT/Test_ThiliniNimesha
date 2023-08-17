@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+}
+
+#name {
+    color: red;
+}
+
+.dropdown-item:active {
+    background: red;
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar-nav>.nav-item>.active>a {
+    color: aqua;
+    background-color: chartreuse;
+}
+
+.nav-item>a:hover {
+    color: red;
+}
+
+.head{
+    color: #a95e39;
+}

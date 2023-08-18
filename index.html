@@ -32,26 +32,15 @@
 
     <nav class="navbar navbar-light bg-white justify-content-end">
             <!-- Dropdown -->
-            <!-- <div class="btn-group">
-                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
-                    English
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="index.html" onclick="changeLang('eng')">English</a>
-                    <a class="dropdown-item" href="index.html" onclick="changeLang('fr')">French</a>
-                    <a class="dropdown-item" href="index.html">German</a>
-                    <a class="dropdown-item" href="index.html">Italian</a>
-                </div>
-            </div> -->
-            <form action="index.html" method="post">
-                <select name="languages" id="lang">
-                  <option value="eng" href="index.html" onclick="changeLang('eng')">English</option>
-                  <option value="fr" href="index.html" onclick="changeLang('fr')">French</option>
-                  <option value="German" href="index.html">German</option>
-                  <option value="Italian" href="index.html">Italian</option>
-                </select>
-                <input type="submit" value="Submit">
-          </form>
+          <div>
+            <select id="language" class="form-control">
+                <option value="en" >English</option>
+                <option value="fr">French</option>
+                <option value="ger" >German</option>
+                <option value="ita" >Italian</option>
+            </select>
+          </div>
+          
     </nav>
 
     <nav class="navbar navbar-expand-sm bg-secondary">
@@ -81,6 +70,12 @@
 
     <div class="container-fluid m-0 p-0">
         <img src="images/mainImage.PNG" width="100%" height="100%">
+        <div class="card" id="transparentcard">
+            <div class="card-body text-center">
+              <h2 class="card-text text-white" id="cardHeading">WELCOME TO</h2>
+              <h3 class="card-text text-danger">eBeyonds</h3>
+            </div>
+          </div>
     </div>
 
     <div class="container text-center pt-5 pb-5">
@@ -136,6 +131,25 @@
     <footer class="bg-dark p-4">
         
     </footer>
+<script>
+    function changeLanguage() {
+        var selectElement = document.getElementById('language');
+        var selectedLanguage = selectElement.value;
+        
+        if (selectedLanguage === 'en') {
+            document.getElementById('content').textContent = language.en.content;
+        } else if (selectedLanguage === 'fr') {
+            document.getElementById('content').textContent = language.en.content;
+        } else if (selectedLanguage === 'ger') {
+            document.getElementById('content').textContent = language.en.content;
+        }else if(selectedLanguage === 'ita'){
+            document.getElementById('content').textContent = language.en.content;
+        }
+    }
+    
+    document.getElementById('language').addEventListener('change', changeLanguage);
+</script>
+    
 </body>
 
 </html>

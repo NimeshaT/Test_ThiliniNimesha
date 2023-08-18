@@ -26,3 +26,13 @@
 .head{
     color: #a95e39;
 }
+
+#transparentcard{
+    width: 20%;
+    position: absolute;
+    margin: auto;
+   bottom: 15px;
+   right: 10px;
+   background:black;
+   opacity: 75%;
+}

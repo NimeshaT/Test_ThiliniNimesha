@@ -36,3 +36,28 @@
    background:black;
    opacity: 75%;
 }
+
+@media only screen and (max-width: 1024px) {
+    #transparentcard {
+        width: 32%;
+        position: absolute;
+        margin: auto;
+        bottom: 514px;
+        right: 10px;
+        background: black;
+        opacity: 0.75;
+    }
+  }
+
+@media only screen and (max-width: 1024px) {
+    
+  #transparentcard {
+    width: 69%;
+    position: absolute;
+    margin: auto;
+    bottom: 218px;
+    right: 10px;
+    background: black;
+    opacity: 0.75;
+}
+  }

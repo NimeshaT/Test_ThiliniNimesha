@@ -34,10 +34,10 @@
             <!-- Dropdown -->
           <div>
             <select id="language" class="form-control">
-                <option value="en" >English</option>
-                <option value="fr">French</option>
-                <option value="ger" >German</option>
-                <option value="ita" >Italian</option>
+                <option value="en" id="enBtn">English</option>
+                <option value="fr" id="frBtn">French</option>
+                <option value="ger" id="gerBtn">German</option>
+                <option value="ita" id="itaBtn">Italian</option>
             </select>
           </div>
           
@@ -47,22 +47,22 @@
         <!-- Links -->
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">HOME</a>
+                <a class="nav-link" id="homeNav" href="index.html">HOME</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">ABOUT</a>
+                <a class="nav-link" id="aboutNav" href="#">ABOUT</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">SERVICES</a>
+                <a class="nav-link"  id="servicesNav"href="#">SERVICES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">TESTIMONIALS</a>
+                <a class="nav-link" id="testimonialsNav" href="#">TESTIMONIALS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">PORTFOLIO</a>
+                <a class="nav-link" id="portfolioNav" href="#">PORTFOLIO</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">CONTACTS</a>
+                <a class="nav-link" id="contactsNav" href="#">CONTACTS</a>
             </li>
 
         </ul>
@@ -137,13 +137,37 @@
         var selectedLanguage = selectElement.value;
         
         if (selectedLanguage === 'en') {
-            document.getElementById('content').textContent = language.en.content;
+            // document.getElementById('content').textContent = language.en.content;
+            document.getElementById('homeNav').textContent = "HOME";
+            document.getElementById('aboutNav').textContent = "ABOUT";
+            document.getElementById('servicesNav').textContent = "SERVICES";
+            document.getElementById('testimonialsNav').textContent = "TESTIMONIALS";
+            document.getElementById('portfolioNav').textContent = "PORTFOLIO";
+            document.getElementById('contactNav').textContent = "CONTACT";
         } else if (selectedLanguage === 'fr') {
-            document.getElementById('content').textContent = language.en.content;
+            // document.getElementById('content').textContent = "language.en.content"+"hello";
+            document.getElementById('homeNav').textContent = "maison";
+            document.getElementById('aboutNav').textContent = "à propos";
+            document.getElementById('servicesNav').textContent = "prestations de service";
+            document.getElementById('testimonialsNav').textContent = "témoignages";
+            document.getElementById('portfolioNav').textContent = "portefeuille";
+            document.getElementById('contactNav').textContent = "CONTACT";
         } else if (selectedLanguage === 'ger') {
-            document.getElementById('content').textContent = language.en.content;
+            // document.getElementById('content').textContent = language.en.content;
+            document.getElementById('homeNav').textContent = "heim";
+            document.getElementById('aboutNav').textContent = "um";
+            document.getElementById('servicesNav').textContent = "Dienstleistungen";
+            document.getElementById('testimonialsNav').textContent = "Zeugnis";
+            document.getElementById('portfolioNav').textContent = "PORTFOLIO";
+            document.getElementById('contactNav').textContent = "Kontakt";
         }else if(selectedLanguage === 'ita'){
-            document.getElementById('content').textContent = language.en.content;
+            // document.getElementById('content').textContent = language.en.content;
+            document.getElementById('homeNav').textContent = "casa";
+            document.getElementById('aboutNav').textContent = "Di";
+            document.getElementById('servicesNav').textContent = "Servizi";
+            document.getElementById('testimonialsNav').textContent = "testimonianze";
+            document.getElementById('portfolioNav').textContent = "portafoglio";
+            document.getElementById('contactNav').textContent = "contatto";
         }
     }
     
